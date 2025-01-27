@@ -1,0 +1,10 @@
+[package]
+name = "ga_cli"
+version = "0.1.0"
+edition = "2021"
+authors = [ "Rasmus Enevoldsen" ]
+readme = "README.org"
+license = "GPL-3.0-or-later"
+
+
+[dependencies]

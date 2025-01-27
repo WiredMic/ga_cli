@@ -1,0 +1,87 @@
+:LATEX:
+#+STARTUP: latexpreview
+:END:
+#+title: Geometric Algebra CLI
+
+* CLI application
+Takes three parameters
+p: How many dimension square to 1
+q: How many elements square to -1
+z: How many elements square to 0
+
+Then it should be able to construct any arbitrary Cayley diagram for the geometric product, the inner product, and the exterior product.
+
+It should also give the basis of the algebra.
+
+The basis are always given as the dual of the lower basis in a G(n,0,0) algebra.
+
+** Example
+*** The different algebras from \(\text{Cl}(2,0,0)\) to \(\text{Cl}(4,0,0)\)
+In the algebra \(\text{Cl}(2,0,0)\). The basis are
+\begin{gather}
+1, \nonumber\\
+\mathrm{e}_{1},\mathrm{e}_{2} ,\nonumber\\
+\mathrm{e}_{1}\mathrm{e}_{2}\nonumber
+\end{gather}
+With \(\mathrm{e}_{1} ^{2} =\mathrm{e}_{2}^{2} = 1\) and \(\mathrm{e}_{i}\mathrm{e}_{j} = -\mathrm{e}_{j}\mathrm{e}_{i}\)
+In this algebra there is a scalar, vectors and a pseudoscalar.
+The pseudoscalar \(\mathrm{e}_{1}\mathrm{e}_{2}\) is a combination of all unit vectors.
+
+The next algebra is \(\text{Cl}(3,0,0)\). The basis are
+\begin{gather}
+1, \nonumber\\
+\mathrm{e}_{1},\mathrm{e}_{2},\mathrm{e}_{3}, \nonumber\\
+\mathrm{e}_{1}\mathrm{e}_{2},\mathrm{e}_{3}\mathrm{e} _{1},\mathrm{e}_{2}\mathrm{e}_{3},\nonumber\\
+\mathrm{e}_{1}\mathrm{e}_{2}\mathrm{e}_{3} \nonumber
+\end{gather}
+
+With \(\mathrm{e}_{1} ^{2} =\mathrm{e}_{2}^{2} =\mathrm{e}_{3}^{2} = 1\) and \(\mathrm{e}_{i}\mathrm{e}_{j} = -\mathrm{e}_{j}\mathrm{e}_{i}\)
+In this algebra there is a scalar, 3 vectors, 3 pseudovectors, and a pseudoscalar.
+The pseudoscalar \(\mathrm{e}_{1}\mathrm{e} _{2}\mathrm{e}_{3}\) is a combination of all unit vectors.
+The pseudovectors are the dual of the vectors in the order going low to high, high to low.
+\begin{gather}
+1,\nonumber\\
+\mathrm{e}_{1},\mathrm{e}_{2},\mathrm{e}_{3}, \nonumber\\
+\mathrm{e}_{3} \star,\mathrm{e}_{2}\star,\mathrm{e} _{1}\star, \nonumber\\
+1\star \nonumber
+\end{gather}
+
+The next algebra is \(\text{Cl}(4,0,0)\). The basis are
+\begin{gather}
+1, \nonumber \\
+\mathrm{e}_{1},\mathrm{e}_{2},\mathrm{e}_{3},\mathrm{e}_{4}, \nonumber\\
+\mathrm{e}_{1}\mathrm{e}_{2},\mathrm{e}_{3}\mathrm{e}_{1},\mathrm{e}_{2}\mathrm{e}_{3},
+\mathrm{e}_{4}\mathrm{e}_{1}, \mathrm{e}_{4}\mathrm{e}_{2},\mathrm{e}_{4}\mathrm{e} _{3},\nonumber \\
+\mathrm{e} _{1}\mathrm{e} _{3}\mathrm{e} _{2},
+\mathrm{e}_{4}\mathrm{e}_{1}\mathrm{e}_{2},\mathrm{e}_{4}\mathrm{e}_{3}\mathrm{e}_{1},\mathrm{e}_{4}\mathrm{e}_{2}\mathrm{e} _3, \nonumber \\
+\mathrm{e}_{1}\mathrm{e}_{2}\mathrm{e} _{3}\mathrm{e} _{4} \nonumber
+\end{gather}
+With \(\mathrm{e}_{1} ^{2} =\mathrm{e}_{2}^{2} =\mathrm{e}_{3}^{2} = \mathrm{e}_{4}^{2} = 1\) and \(\mathrm{e}_{i}\mathrm{e}_{j} = -\mathrm{e}_{j}\mathrm{e}_{i}\)
+In this algebra there is a scalar, 4 vectors, 6 bivectors, 4 pseudovectors, and a pseudoscalar.
+The pseudoscalar \(\mathrm{e}_{1}\mathrm{e} _{2}\mathrm{e} _{3}\mathrm{e}_{4}\) is a combination of all unit vectors.
+The pseudovectors are the dual of the vectors and the second half of the bivector are the dual of the first in the order going low to high, high to low.
+
+\begin{gather}
+1, \nonumber \\
+\mathrm{e}_{1},\mathrm{e}_{2},\mathrm{e}_{3},\mathrm{e}_{4}, \nonumber \\
+\mathrm{e}_{1}\mathrm{e}_{2},\mathrm{e}_{3}\mathrm{e}_{1},\mathrm{e}_{2}\mathrm{e}_{3}, \nonumber\\
+\mathrm{e}_{2}\mathrm{e} _{3}\star,\mathrm{e}_{3}\mathrm{e} _{1}\star,\mathrm{e}_{1}\mathrm{e} _{2}\star,\nonumber \\
+\mathrm{e} _{4}\star,\mathrm{e}_{3} \star,\mathrm{e}_{2}\star,\mathrm{e} _{1}\star,\nonumber \\
+1\star \nonumber
+\end{gather}
+
+This pattern should follow for all following algebras.
+All other algebras with a combination of \(p\), \(q\), and \(z\) dimensions should have the same basis in the same other.
+The first unit vectors are from \(p\), the next form \(q\) and last for \(z\).
+However, the interaction between the basis are different.
+This means that an algebra \(\text{Cl}(1,0,1)\) still has the basis as \(\text{Cl}(2,0,0)\).
+\begin{gather}
+1, \nonumber\\
+\mathrm{e}_{1},\mathrm{e}_{2} ,\nonumber\\
+\mathrm{e}_{1}\mathrm{e}_{2}\nonumber
+\end{gather}
+However the square of the unit vectors is now \(\mathrm{e}_{1}^{2}=1,\mathrm{e}_{2}^{2}=0\) and \(\mathrm{e}_{i}\mathrm{e}_{j} = -\mathrm{e}_{j}\mathrm{e}_{i}\).
+
+* Extra:
+Take two multivector and calculate.
+At some point maybe rotate.
