@@ -18,11 +18,23 @@ The basis are always given as the dual of the lower basis in a G(n,0,0) algebra.
 ** Example
 *** The different algebras from \(\text{Cl}(2,0,0)\) to \(\text{Cl}(4,0,0)\)
 In the algebra \(\text{Cl}(2,0,0)\). The basis are
+#+begin_src latex :exports results
 \begin{gather}
 1, \nonumber\\
 \mathrm{e}_{1},\mathrm{e}_{2} ,\nonumber\\
 \mathrm{e}_{1}\mathrm{e}_{2}\nonumber
 \end{gather}
+#+end_src
+
+#+RESULTS:
+#+begin_export latex
+\begin{gather}
+1, \nonumber\\
+\mathrm{e}_{1},\mathrm{e}_{2} ,\nonumber\\
+\mathrm{e}_{1}\mathrm{e}_{2}\nonumber
+\end{gather}
+#+end_export
+
 With \(\mathrm{e}_{1} ^{2} =\mathrm{e}_{2}^{2} = 1\) and \(\mathrm{e}_{i}\mathrm{e}_{j} = -\mathrm{e}_{j}\mathrm{e}_{i}\)
 In this algebra there is a scalar, vectors and a pseudoscalar.
 The pseudoscalar \(\mathrm{e}_{1}\mathrm{e}_{2}\) is a combination of all unit vectors.
@@ -85,3 +97,7 @@ However the square of the unit vectors is now \(\mathrm{e}_{1}^{2}=1,\mathrm{e}_
 * Extra:
 Take two multivector and calculate.
 At some point maybe rotate.
+
+#+begin_src latex
+
+#+end_src
