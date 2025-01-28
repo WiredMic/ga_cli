@@ -47,6 +47,10 @@
               cargo-edit
               cargo-watch
               rust-analyzer
+              rustc
+              # debugger
+              lldb
+              gdb
             ];
         };
       });
